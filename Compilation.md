@@ -19,7 +19,7 @@ c:\Users\songj\Documents\Arduino\libraries\M5AtomS3\src\utility\In_eSPI.cpp:870:
 + Solution
 
 1. find platform.txt file in C:\Users\songj\AppData\Local\Arduino15\packages\m5stack\hardware\esp32\2.0.6\ (You need to adjust the directory based on the arduino ide version information and hardware vendor information)
-2.  find the below code segment
+2. find the below code segment
 
 ```
 # Arduino Compile Warning Levels
@@ -30,7 +30,6 @@ compiler.warning_flags.more=-Wall -Werror=all
 compiler.warning_flags.all=-Wall -Werror=all -Wextra
 ```
 change to
-
 ```
 # Arduino Compile Warning Levels
 #compiler.warning_flags=-w
@@ -39,5 +38,7 @@ compiler.warning_flags.default=-Wno-error
 #compiler.warning_flags.more=-Wall -Werror=all
 #compiler.warning_flags.all=-Wall -Werror=all -Wextra
 ```
+**comment other beside default line, add -Wno-error parameter.
+-Wno-error tells the compiler to ignore warning information**
 
-$ -Wno-error tells the compiler to ignore warning information $ 
+3. Save platform.txt, then build your app.
